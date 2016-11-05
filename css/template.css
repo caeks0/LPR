@@ -1,0 +1,82 @@
+body {
+	background-color: #ffffff;
+	background-image: url('images/newtrendlogo_opacity.png');
+	background-position: 95% 95%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin: 0px;
+}
+
+#top {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-position: 5px 5px;
+	background-repeat: no-repeat;
+	background-image: url('images/menu_logo.png');
+	height: 49px;
+	width: 100%;
+	background-color: #eeeeee;				
+	border-bottom: 2px solid #111111;
+}
+
+#content {
+	color: #111111;
+	text-align: justify;
+	font-family: verdana;
+	font-size: 10pt;
+	padding: 20px;
+	padding-top: 70px;
+	margin: 20px;
+}
+
+#content h1 {
+	margin: 5px 0px;
+	font-size: 32pt;
+	font-weight: bold;
+}
+
+#content h2 {
+	margin: 5px 0px;
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+#content h3 {
+	margin: 5px 0px;
+	font-size: 12pt;
+	font-weight: bold;
+}
+
+#content h4 {
+	margin: 5px 0px;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.section {
+	padding: 5px;
+	margin: 5px;
+	border: 1px solid #111111;
+	width: 750px;
+}
+
+#validationresults {
+	display: none;
+	position: fixed;
+	top: 33%;
+	left: 33%;
+	width: 33%;
+	padding: 10px; 
+	border: 3px solid #111111;
+	background: #eeeeee;
+}
+
+#reporttearoff {
+	font-size:9px;
+	border-top: 1px dotted black;
+}
+
+a:link    {color:#0000ff;}
+a:visited {color:#0000ff;}
+a:hover   {color:#ff0000;}
