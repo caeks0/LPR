@@ -17,7 +17,7 @@ $debug = 0;
 require ("functions/connect.php");
 
 //Generate results table
-$plates = mysqli_query($conn,"SELECT * FROM tbl_plates LIMIT 10");
+$plates = mysqli_query($conn,"SELECT * FROM tbl_plates WHERE matches_pattern=1 ORDER BY unix_timestamp DESC LIMIT 90");
 
 echo "<table border='1'>
 <tr>
@@ -27,6 +27,7 @@ echo "<table border='1'>
 <th><Center>Plate Number</th>
 <th><Center>Confidence</th>
 <th><Center>Image</th>
+<th><Center>View</th>
 
 </tr>";
 
@@ -46,8 +47,8 @@ $converted_date = date('d-m-Y H:i:s', $result_timestamp/1000);
 echo "<td>$converted_date</td>";
 echo "<td width=200>$result_platenumber</td>";
 echo "<td width=150>$result_confidence</td>";
-echo "<td><a href=plate_images/$result_uuid.jpg><img src='plate_images/$result_uuid.jpg' width ='200' height='100'></a></td>";
- 
+echo "<td><a href=plate_images_link/$result_uuid.jpg><img src='plate_images_link/$result_uuid.jpg' width ='200' height='100'></a></td>";
+ echo "<td> <a href='../LPR/view_vehicle.php?plt=$result_platenumber'>View</a></td>";
 echo "</tr>";
   }
 echo "</font></table>";

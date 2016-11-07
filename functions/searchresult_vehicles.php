@@ -20,14 +20,14 @@ echo "<table border='1'>
 //change the str length check to determine how many characters need to be entered to initiate search
 while($result = mysqli_fetch_assoc($plates))
 {
-	
+$plate=$result['plate_number'];	
 if((strlen($q)>0)){
 echo "<tr>";
 echo "<td>" . $result['plate_number'] . "</td>";
 echo "<td>" . $result['vehicle_make'] . "</td>";
 echo "<td>" . $result['vehicle_model'] . "</td>";
 echo "<td>" . $result['owner_firstname']." ".$result['owner_lastname'] . "</td>";
-echo "<td> <a href='view_client.php'>View</a></td>";
+echo "<td><a href='../LPR/view_vehicle.php?plt=$plate'>View</a></td>";
 
 echo "</tr>";
 }
