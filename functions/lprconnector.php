@@ -4,6 +4,7 @@ $debug = 0;
 
 //Get my connects
 require ("connect.php");
+require ("passwords.php");
 
 //Set time, just incase its not done server side
 date_default_timezone_set('Australia/Perth');
@@ -31,6 +32,7 @@ $confidence = $jsonarray["results"][0]["confidence"];
 $pattern_match = $jsonarray["results"][0]["matches_template"];
 }
 
+
 //Alert settings
 $alert_checking = 0;
 $email_alerts = 1;
@@ -50,6 +52,26 @@ if($timestamp_difference < 15000)
 echo "\033[31m Unix timestamp = $unix_timestamp | Existing timestamp = $existing_plate_timestamp | Difference = $timestamp_difference | Flag = $duplicate_plate_flag | \033[0m ";
 
 //END Duplicate checks
+
+
+
+//Get snapshot from wide FOV camera 1
+$content = file_get_contents("http://admin:$hik1@192.168.1.108/Streaming/channels/1/picture");
+//Store in the filesystem.
+$fp = fopen("HIK1-$uuid.jpg", "w");
+fwrite($fp, $content);
+fclose($fp);
+
+//Get snapshot from wide FOV camera 2
+$content = file_get_contents("http://admin:$hik2@192.168.1.106/Streaming/channels/1/picture");
+//Store in the filesystem.
+$fp = fopen("HIK2-$uuid.jpg", "w");
+fwrite($fp, $content);
+fclose($fp);
+
+
+
+
 
 //do some pattern matching
 

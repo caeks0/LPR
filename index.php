@@ -18,6 +18,7 @@ require ("functions/connect.php");
 
 //Generate results table
 $plates = mysqli_query($conn,"SELECT * FROM tbl_plates WHERE matches_pattern=1 ORDER BY unix_timestamp DESC LIMIT 90");
+date_default_timezone_set('Australia/Perth');
 
 echo "<table border='1'>
 <tr>
