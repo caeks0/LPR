@@ -6,4 +6,5 @@
 		<meta name="author" content="mjmitch1991@gmail.com" />
 		<meta name="keywords" content="" />
 		<meta name="description" content="Caeks LPR Control" />
-		<link href="images/logo_icon.png" rel="icon">
+		<link href="images/cake_icon.png" rel="icon">
+		

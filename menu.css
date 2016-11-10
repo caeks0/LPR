@@ -3,6 +3,7 @@
 	top: 28px;
 	left: 70px;
 	text-align: left;
+
 }
 
 .menu_item {
@@ -15,10 +16,11 @@
 	text-align: left;
 	margin: 0px;
 	padding-left: 4px;
-	color: #111111;
+	color: #BBBBBB;
 	font-weight: normal;
 	background-color: #eeeeee;
 	border: 2px solid #eeeeee;
+
 }
 
 .menu_item li {
