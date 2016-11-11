@@ -88,7 +88,7 @@ if($duplicate_plate_flag==0)
  echo mysqli_num_rows($vehicle_existance_query);
 if(mysqli_num_rows($vehicle_existance_query)==0)
 {
-	$add_vehicle_query = "INSERT INTO tbl_vehicles (plate_number, matches_pattern) VALUES ('$plate_number','$pattern_match')";
+	$add_vehicle_query = "INSERT INTO tbl_vehicles (plate_number, matches_pattern, date_added, camera_id, site_id) VALUES ('$plate_number','$pattern_match','$unix_timestamp','camera_id','$site_id')";
 	if ($conn->query($add_vehicle_query) === TRUE) 
 	{
     	echo "\033[36m Vehicle has not been seen before! Added \033[32m $plate_number\033[36m to database \033[0m | ";
